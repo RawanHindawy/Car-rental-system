@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require 'connection.php';
+require '../connection.php';
 $conn = Connect();
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,11 @@ $conn = Connect();
         <title>Navigate Cars</title>
         <link rel="stylesheet" href="style.css">  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
+        
+
+
+
+       <style>
 
 form.search input[type=text] {
   padding: 6px;
@@ -53,12 +57,12 @@ form.search button {
           <input id="btn" style="width:100px;height:40px;" type="submit" value="Add Car" name="add"/>
           </form>
 
-        <form action="search.php" class="search" style="margin:auto;max-width:300px"> 
+        <form action="searchCars.php" class="search" style="margin:auto;max-width:300px"> 
         <input type="text" placeholder="Search.." name="search">
              <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        </br></br>
-      
+
+
 
         <!-- Construct table-->
         <table id="table">
